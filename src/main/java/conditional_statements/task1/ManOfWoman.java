@@ -16,7 +16,9 @@ public class ManOfWoman {
         StringBuilder otherName = new StringBuilder(name);
         char lastLetter = otherName.charAt(otherName.length() - 1);
         if (lastLetter == 'a' || lastLetter == 'e') {
-            if (!name.equals("Kuba") && !name.equals("Barnaba")) {
+            if (!name.equalsIgnoreCase("Kuba") &&
+                    !name.equalsIgnoreCase("Barnaba") &&
+                    (!name.equalsIgnoreCase("Bonawentura"))) {
                 System.out.println(name +" is a woman.");
             } else {
                 System.out.println(name +" is a man.");
